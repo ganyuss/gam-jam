@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577565323669844948, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -75,5 +79,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ennemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7734181566245920225, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 5964885237905955493}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+--- !u!95 &5964885237905955493 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+  m_PrefabInstance: {fileID: 4721136680072262091}
+  m_PrefabAsset: {fileID: 0}

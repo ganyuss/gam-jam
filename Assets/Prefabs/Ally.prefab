@@ -68,8 +68,17 @@ PrefabInstance:
       value: Ally
       objectReference: {fileID: 0}
     - target: {fileID: 7734181566245920225, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1079047347551442556}
+    - target: {fileID: 7734181566245920225, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: ennemyCoolDown
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+--- !u!95 &1079047347551442556 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+  m_PrefabInstance: {fileID: 2142258316871253266}
+  m_PrefabAsset: {fileID: 0}
