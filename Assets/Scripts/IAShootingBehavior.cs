@@ -14,8 +14,8 @@ public class IAShootingBehavior : MonoBehaviour
 
     public UnityEvent ShotFired;
 
-    public float ennemyCoolDown = 2.5f;
-    public float range = 10.0f;
+    public float coolDown = 2.5f;
+    public float range = 15.0f;
 
     void Start()
     {
@@ -33,11 +33,19 @@ public class IAShootingBehavior : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
-        if(isRifleReady)
+        var distanceToClosestTarget = Vector2.Distance(transform.position, closestTarget.position); 
+
+        if(isRifleReady && distanceToClosestTarget<=range)
         {
-            timer = ennemyCoolDown;
+            timer = coolDown;
             EnnemyShoot();
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
     void EnnemyShoot()

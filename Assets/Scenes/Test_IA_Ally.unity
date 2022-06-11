@@ -165,7 +165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1079047347551442556, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_RootOrder
@@ -214,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 8399845616197570250, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_Name
       value: Ally
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570211273219432691, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
+      propertyPath: ennemyCoolDown
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
