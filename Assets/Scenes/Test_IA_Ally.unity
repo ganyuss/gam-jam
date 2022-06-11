@@ -167,17 +167,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3415793182220499689, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.103035
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4734626
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -586,6 +590,25 @@ MonoBehaviour:
   cam: {fileID: 1714232320}
   player: {fileID: 1813375380}
   threshold: 5
+--- !u!1 &1748755375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8399845616197570250, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
+  m_PrefabInstance: {fileID: 487626443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1748755385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748755375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716491b422bd9b442ab572faae9dc8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceBattlefield: 0
+  player: {fileID: 0}
 --- !u!1 &1813375378
 GameObject:
   m_ObjectHideFlags: 0

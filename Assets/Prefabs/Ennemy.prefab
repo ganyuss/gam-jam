@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5558144132997150725, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577565323669844948, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_RootOrder
       value: 0

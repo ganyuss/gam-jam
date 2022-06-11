@@ -29,9 +29,15 @@ public class ClosestTargetBehavior : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
+
         if (nearestEnemy != null && shortestDistance <= range )
 	    {
             target = nearestEnemy.transform;
+        }
+
+        else
+        {
+            target = null;
         }
     }
 }

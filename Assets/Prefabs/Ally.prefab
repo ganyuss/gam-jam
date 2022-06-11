@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5558144132997150725, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577565323669844948, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -82,3 +90,23 @@ Animator:
   m_CorrespondingSourceObject: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
   m_PrefabInstance: {fileID: 2142258316871253266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8399845616197570250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7577565323669844952, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+  m_PrefabInstance: {fileID: 2142258316871253266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4165740051622740067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399845616197570250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716491b422bd9b442ab572faae9dc8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceBattlefield: 0
+  player: {fileID: 0}
+  closestTarget: {fileID: 0}
