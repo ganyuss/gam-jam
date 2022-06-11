@@ -4,7 +4,7 @@ using UnityEngine;
 public class PrefabInstantiator : MonoBehaviour
 {
     public GameObject PrefabToInstantiate;
-    public float HeadStart;
+    public Vector2 HeadStart;
 
     [Button]
     public void InstantiatePrefab()
@@ -21,7 +21,7 @@ public class PrefabInstantiator : MonoBehaviour
         if (prefabWasActive)
             PrefabToInstantiate.SetActive(true);
 
-        instantiatedObject.transform.position += currentTransform.up * HeadStart;
+        instantiatedObject.transform.Translate(HeadStart);
         instantiatedObject.SetActive(true);
     }
 }
