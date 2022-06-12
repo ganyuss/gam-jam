@@ -24,31 +24,13 @@ public class IAShootingBehavior : MonoBehaviour
         GetClosestTarget = GetComponent<ClosestTargetBehavior>();
     }
 
-    void Update()
-    {
-        closestTarget = GetClosestTarget.target;
-
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-        }
-
-        var distanceToClosestTarget = Vector2.Distance(transform.position, closestTarget.position); 
-
-        if(isRifleReady && distanceToClosestTarget<=range)
-        {
-            timer = coolDown;
-            EnnemyShoot();
-        }
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    void EnnemyShoot()
+    public void EnnemyShoot()
     {
         animator.SetTrigger("shoot");
     }
