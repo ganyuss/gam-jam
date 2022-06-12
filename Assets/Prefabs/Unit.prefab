@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToInstantiate: {fileID: 3117373118650234491, guid: 65d1447dbf4b1514f83c71abae021a47, type: 3}
   HeadStart: {x: 0.25, y: 1.41}
+  AngleRandomness: 0
 --- !u!82 &-5558144132997150725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577565323669844952}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2f688ad9a3dc8b84aad18c6179f4b7ea, type: 2}
   m_CullingMode: 0
