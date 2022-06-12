@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnNewAlly()
     {
-        Instantiate(EnemyPrefab, WorldUtilities.GenerateNewPositionOutsideCamera(RelativePosition.Above),
+        Instantiate(EnemyPrefab, WorldUtilities.GenerateNewPositionOutsideCamera(RelativePosition.Above) + new Vector3(Random.Range(0.1f,0.8f), Random.Range(0.1f,0.8f)),
             Quaternion.identity);
     }
 }
