@@ -87,13 +87,25 @@ PrefabInstance:
       propertyPath: ennemyCoolDown
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7734181566245920225, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
 --- !u!95 &1079047347551442556 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: -7835314134918026386, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
   m_PrefabInstance: {fileID: 2142258316871253266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3632409467302283790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3445884544759969564, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+  m_PrefabInstance: {fileID: 2142258316871253266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399845616197570250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368cdaa90933099498ea8316f8189662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8399845616197570244 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7577565323669844950, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
@@ -110,6 +122,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7577565323669844952, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
   m_PrefabInstance: {fileID: 2142258316871253266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589216490223317874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399845616197570250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d997c6c6fa2337447ad061f3d60a76ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlayerGameObjectChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4165740051622740067}
+        m_TargetAssemblyTypeName: AllyBehavior, Assembly-CSharp
+        m_MethodName: set_player
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4165740051622740067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,22 +162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceBattlefield: 0
-  player: {fileID: 0}
   closestTarget: {fileID: 8399845616197570244}
   enemySet: {fileID: 11400000, guid: 20b4d6919edf2e2408cba2583578c801, type: 2}
   speed: 6
-  shootingBehavior: {fileID: 8570211273219432691}
+  shootingBehavior: {fileID: 3632409467302283790}
   movementTimer: 0
   decision: 0
   newPosition: {x: 0, y: 0}
---- !u!114 &8570211273219432691 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7734181566245920225, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
-  m_PrefabInstance: {fileID: 2142258316871253266}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8399845616197570250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 336efac1e9a4d9f4c8980af840a92956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

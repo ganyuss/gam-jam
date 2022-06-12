@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
     public float moveSpeed;
-    public GameObject player;
-    public Animator animator;
 
     void Update()
     {
@@ -18,7 +14,7 @@ public class MovementController : MonoBehaviour
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-        player.transform.position += (Vector3.up * _verticalMovement);
-        player.transform.position += (Vector3.right * _horizontalMovement);
+        transform.parent.position += (Vector3.up * _verticalMovement);
+        transform.parent.position += (Vector3.right * _horizontalMovement);
     }
 }

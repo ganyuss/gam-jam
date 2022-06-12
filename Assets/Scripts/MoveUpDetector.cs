@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class MoveUpDetector : MonoBehaviour
 {
-    public Transform TransformToCheck;
+    public GameObject GameObjectToCheck { get; set; }
     public GameObjectSet ObjectsToMove;
 
     [Space] 
-    public float ThreshHold;
+    public float Threshold;
     public bool CanMoveUp;
     
     void Update()
     {
-        var position = transform.position;
-        Vector2 signedDistance = TransformToCheck.position - position;
+        Vector2 signedDistance = GameObjectToCheck.transform.position - transform.position;
         
-        if (signedDistance.y > ThreshHold)
+        if (signedDistance.y > Threshold)
         {
+            Debug.Log(signedDistance.y);
             foreach (var objectToMove in ObjectsToMove.EnabledGameObject)
             {
-                objectToMove.transform.position += Vector3.down * (signedDistance.y * 8f * Time.deltaTime);
+                objectToMove.transform.position += Vector3.down * ((signedDistance.y - Threshold) * 8f * Time.deltaTime);
             }
         }
     }

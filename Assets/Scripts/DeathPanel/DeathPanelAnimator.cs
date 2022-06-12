@@ -10,7 +10,8 @@ public class DeathPanelAnimator : MonoBehaviour
     public float ObjectSize { get; private set; }
 
     public UnityEvent StartAnimation;
-
+    public event Action OnAnimationEnd;
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -37,6 +38,11 @@ public class DeathPanelAnimator : MonoBehaviour
         Debug.Log(ScreenPosition);
         
         StartAnimation.Invoke();
+    }
+
+    public void AnimationEnd()
+    {
+        OnAnimationEnd?.Invoke();
     }
 
     private void OnDestroy()
