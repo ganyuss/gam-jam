@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveUpDetector : MonoBehaviour
@@ -15,18 +13,6 @@ public class MoveUpDetector : MonoBehaviour
     
     void Update()
     {
-        if (!GameObjectToCheck || !CanMoveUp)
-            return;
-        
-        Vector2 signedDistance = GameObjectToCheck.transform.position - transform.position;
-        
-        if (signedDistance.y > Threshold)
-        {
-            foreach (var objectToMove in ObjectsToMove.EnabledGameObject)
-            {
-                objectToMove.transform.position += Vector3.down * ((signedDistance.y - Threshold) * 8f * Time.deltaTime);
-            }
-        }
 
         foreach(var enemy in EnemySet.EnabledGameObject)
         {
@@ -39,5 +25,18 @@ public class MoveUpDetector : MonoBehaviour
             }
         }
         CanMoveUp = true;
+        
+        if (!GameObjectToCheck || !CanMoveUp)
+            return;
+        
+        Vector2 signedDistance = GameObjectToCheck.transform.position - transform.position;
+        
+        if (signedDistance.y > Threshold)
+        {
+            foreach (var objectToMove in ObjectsToMove.EnabledGameObject)
+            {
+                objectToMove.transform.position += Vector3.down * ((signedDistance.y - Threshold) * 8f * Time.deltaTime);
+            }
+        }
     }
 }

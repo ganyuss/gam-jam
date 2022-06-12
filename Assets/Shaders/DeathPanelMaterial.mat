@@ -56,14 +56,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _CutoutBlend: 23.5
-    - _CutoutCenterX: 0.5178412
-    - _CutoutCenterY: 0.2981687
-    - _CutoutSize: 41.385925
+    - _CutoutCenterX: 0.3342069
+    - _CutoutCenterY: 0.4400029
+    - _CutoutSize: 1435.3092
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1

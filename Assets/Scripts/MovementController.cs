@@ -14,7 +14,16 @@ public class MovementController : MonoBehaviour
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-        transform.parent.position += (Vector3.up * _verticalMovement);
-        transform.parent.position += (Vector3.right * _horizontalMovement);
+        var parent = transform.parent;
+        var position = parent.position;
+        position += (Vector3.up * _verticalMovement);
+        position += (Vector3.right * _horizontalMovement);
+
+        float xLimit = WorldUtilities.TerrainWidth / 2 - 0.8f;
+        float yLimit = WorldUtilities.CameraHeight / 2 - 0.8f;
+        position.x = Mathf.Clamp(position.x, -xLimit, xLimit);
+        position.y = Mathf.Clamp(position.y, -yLimit, yLimit);
+            
+        parent.position = position;
     }
 }

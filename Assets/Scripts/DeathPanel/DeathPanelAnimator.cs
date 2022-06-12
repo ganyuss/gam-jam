@@ -11,6 +11,8 @@ public class DeathPanelAnimator : MonoBehaviour
 
     public UnityEvent StartAnimation;
     public event Action OnAnimationEnd;
+
+    private bool IsInAnimation;
     
     private void Awake()
     {
@@ -31,6 +33,11 @@ public class DeathPanelAnimator : MonoBehaviour
 
     public void StartAnimationAt(Vector2 screenPosition, float objectSize)
     {
+        if (IsInAnimation)
+            return;
+
+        IsInAnimation = true;
+        
         ScreenPosition = screenPosition;
         ObjectSize = objectSize;
         
@@ -39,6 +46,7 @@ public class DeathPanelAnimator : MonoBehaviour
 
     public void AnimationEnd()
     {
+        IsInAnimation = false;
         OnAnimationEnd?.Invoke();
     }
 

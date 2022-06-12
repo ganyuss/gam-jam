@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3412633489697514165}
   - component: {fileID: 349584383531475083}
   - component: {fileID: 6076343082951814660}
+  - component: {fileID: 2175137013067854819}
   m_Layer: 0
   m_Name: DeathAlly
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: 30374602a4adb774ea21612dace9e3c6, type: 3}
   m_Color: {r: 0.60784316, g: 1, b: 0.7490196, a: 1}
   m_FlipX: 0
@@ -120,6 +121,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectSet: {fileID: 11400000, guid: d22ccca4c4bba5a42abe19b697537da5, type: 2}
+--- !u!114 &2175137013067854819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689965173339556726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca950b49ff1cdc40b2dd325dab29bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeightLimit: -20
 --- !u!1 &9131428206792710723
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: 9f87a74b843e1544a9ee876427173a7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

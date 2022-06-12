@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,11 +9,18 @@ public class PlayerOnDieBehaviour : MonoBehaviour
 
     private void Start()
     {
-        DeathPanelAnimator.Instance.OnAnimationEnd += FindNewAlly;
+        DeathPanelAnimator.Instance.OnAnimationEnd += OnDeathAnimationEnd;
+    }
+
+    private void OnDeathAnimationEnd()
+    {
+        DeathPanelAnimator.Instance.OnAnimationEnd -= OnDeathAnimationEnd;
+        Destroy(gameObject);
     }
 
     private void OnEnable()
     {
+        Debug.Log("OnEnable");
         UpdateOnDieListener();
     }
 
@@ -20,6 +28,12 @@ public class PlayerOnDieBehaviour : MonoBehaviour
     {
         if (transform.parent != null)
             transform.parent.gameObject.GetComponent<UnitDieBehaviour>().OnDie.AddListener(OnDie);
+    }
+
+    private void OnDisable()
+    {
+        if (transform.parent != null)
+            transform.parent.gameObject.GetComponent<UnitDieBehaviour>().OnDie.RemoveListener(OnDie);
     }
 
     private void OnDie()
@@ -37,10 +51,5 @@ public class PlayerOnDieBehaviour : MonoBehaviour
         myTransform.localRotation = Quaternion.identity;
         
         gameObject.SetActive(true);
-    }
-
-    private void OnDestroy()
-    {
-        DeathPanelAnimator.Instance.OnAnimationEnd -= FindNewAlly;
     }
 }
