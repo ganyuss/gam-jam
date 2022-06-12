@@ -722,9 +722,9 @@ MonoBehaviour:
   EnemySet: {fileID: 11400000, guid: 20b4d6919edf2e2408cba2583578c801, type: 2}
   EnemyPrefab: {fileID: 2930773843392758291, guid: ed2acd53802aaf349ac108da62562fcc, type: 3}
   RespawnDelay:
-    Min: 0
-    Max: 2.4059927
-  MaxEnemyCount: 25
+    Min: 0.5
+    Max: 4.261425
+  MaxEnemyCount: 10
 --- !u!4 &1008059570
 Transform:
   m_ObjectHideFlags: 0
