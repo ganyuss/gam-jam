@@ -27,7 +27,8 @@ public class AllyBehavior : MonoBehaviour
 
     void Update()
     {
-        maxDistanceBattlefield = player.transform.position.y;
+        if (player)
+            maxDistanceBattlefield = player.transform.position.y;
 
 
         if(movementTimer > 0)
@@ -121,7 +122,15 @@ public class AllyBehavior : MonoBehaviour
                 return 2;
             }
 
-            newPosition = new Vector2(transform.position.x + Random.Range(-5f, 5f), maxDistanceBattlefield + Random.Range(-5f, 5f)); 
+            newPosition = new Vector2(transform.position.x + Random.Range(-5f, 5f), maxDistanceBattlefield + Random.Range(-5f, 5f));
+            if (newPosition.x < -WorldUtilities.TerrainWidth / 2)
+            {
+                newPosition.x += 4;
+            }
+            if (newPosition.x > WorldUtilities.TerrainWidth / 2)
+            {
+                newPosition.x -= 4;
+            }
             return 0;
         }
 

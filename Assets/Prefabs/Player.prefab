@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6158182296675162974}
   - component: {fileID: 2970666633421873092}
   - component: {fileID: 1958735881}
+  - component: {fileID: 1958735882}
+  - component: {fileID: 1958735883}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -269,3 +271,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e697c100b15df4d801fc2106296d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1958735882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158182296675162967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ddddcfe1002514583597b515dbc511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958735883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158182296675162967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73d50320d166ae45a8c592e683ad61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllySet: {fileID: 11400000, guid: 3da665b1ddb6aa94f8527e988a771de8, type: 2}
+  DeathAnimationCutoutSize: 40

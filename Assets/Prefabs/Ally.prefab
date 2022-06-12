@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1051973323334669316, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: DiePropPrefab
+      value: 
+      objectReference: {fileID: 4689965173339556726, guid: a844c9bff8fecd840ad9696beeb0d206, type: 3}
     - target: {fileID: 7577565323669844948, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_RootOrder
       value: 0

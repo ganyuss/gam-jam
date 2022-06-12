@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +8,7 @@ public class PlayerGameObjectSetter : MonoBehaviour
     private void Start()
     {
         OnPlayerGameObjectChanged.Invoke(PlayerGameObjectChangedListener.CurrentPlayerGameObject);
+        PlayerGameObjectChangedListener.OnNewPlayerGameObject += OnPlayerGameObjectChanged.Invoke;
     }
 
     private void OnDisable()

@@ -18,7 +18,7 @@ public class AllyHijacker : MonoBehaviour
         Hijack();
     }
 
-    void OnTransformParentChanged()
+    void OnEnable()
     {
         Hijack();
     }

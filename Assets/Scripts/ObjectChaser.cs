@@ -10,6 +10,9 @@ public class ObjectChaser : MonoBehaviour
 
     void Update()
     {
+        if (!GameObjectToChase)
+            return;
+        
         var position = transform.position;
         Vector2 signedDistance = GameObjectToChase.transform.position - position;
         

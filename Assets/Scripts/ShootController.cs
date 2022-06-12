@@ -43,7 +43,7 @@ public class ShootController : MonoBehaviour
         }
     }
 
-    private void OnTransformParentChanged()
+    private void OnEnable()
     {
         UpdateShootingBehaviour();
     }
