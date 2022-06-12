@@ -75,10 +75,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6084906
       objectReference: {fileID: 0}
-    - target: {fileID: 7577565323669844950, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
-      propertyPath: range
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7577565323669844952, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_Name
       value: Ally
@@ -172,4 +168,5 @@ MonoBehaviour:
   shootingBehavior: {fileID: 3632409467302283790}
   movementTimer: 0
   decision: 0
+  nearestEnemy: {fileID: 0}
   newPosition: {x: 0, y: 0}

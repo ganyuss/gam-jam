@@ -41,7 +41,6 @@ public class PlayerOnDieBehaviour : MonoBehaviour
 
     private void OnDestroy()
     {
-
         DeathPanelAnimator.Instance.OnAnimationEnd -= FindNewAlly;
     }
 }
