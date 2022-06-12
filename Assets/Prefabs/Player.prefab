@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6158182296675162968}
   - component: {fileID: 6158182296675162971}
   - component: {fileID: 6158182296675162974}
-  - component: {fileID: 6158182296675162960}
+  - component: {fileID: 2970666633421873092}
+  - component: {fileID: 1958735881}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -50,8 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  player: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &6158182296675162972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rifleCooldown: 1.5
-  prefabInstantiator: {fileID: 0}
+  ShootingBehaviour: {fileID: 0}
   ShotFired:
     m_PersistentCalls:
       m_Calls:
@@ -246,24 +245,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!50 &6158182296675162960
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &2970666633421873092
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6158182296675162967}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fd863db0e248546ad46ae2b578f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958735881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158182296675162967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e697c100b15df4d801fc2106296d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

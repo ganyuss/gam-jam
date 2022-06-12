@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ObjectChaser : MonoBehaviour
 {
-    public Transform TransformToChase;
+    public GameObject GameObjectToChase { get; set; }
 
     public float FreeWidth;
 
     void Update()
     {
         var position = transform.position;
-        Vector2 signedDistance = TransformToChase.position - position;
+        Vector2 signedDistance = GameObjectToChase.transform.position - position;
         
         if (Mathf.Abs(signedDistance.x) > FreeWidth)
         {

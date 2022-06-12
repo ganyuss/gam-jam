@@ -61,9 +61,9 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _CutoutBlend: 23.5
-    - _CutoutCenterX: 0.49887308
+    - _CutoutCenterX: 0.49898756
     - _CutoutCenterY: 0.8236491
-    - _CutoutSize: 1933.8599
+    - _CutoutSize: 1512.87
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1

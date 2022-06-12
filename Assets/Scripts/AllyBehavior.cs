@@ -7,14 +7,13 @@ public class AllyBehavior : MonoBehaviour
 {
 
     public float maxDistanceBattlefield;
-    public GameObject player;
+    public GameObject player { get; set; }
     public ClosestTargetBehavior closestTarget;
     public GameObjectSet enemySet;
     public float speed;
-    public IAShootingBehavior shootingBehavior;
+    public ShootingBehaviour shootingBehavior;
 
     public float movementTimer;
-    private float randomWeight = 50.0f;
     public int decision;
     private GameObject nearestEnemy = null;
     public Vector2 newPosition;
@@ -37,8 +36,8 @@ public class AllyBehavior : MonoBehaviour
 
             if (movementTimer <= 0)
                 decision = NewDecision();
-            else
-                return;
+            
+            return;
         }
 
         switch(decision)
@@ -48,7 +47,7 @@ public class AllyBehavior : MonoBehaviour
                 break;
 
             case 1:
-                shootingBehavior.EnnemyShoot();
+                shootingBehavior.Shoot();
                 movementTimer = 2.0f;
                 break;
 

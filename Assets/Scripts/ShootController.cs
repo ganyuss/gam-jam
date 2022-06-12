@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,7 +8,7 @@ public class ShootController : MonoBehaviour
     public float rifleCooldown = 1.0f;
     public bool isRifleReady => timer <= 0;
 
-    public PrefabInstantiator prefabInstantiator;
+    public ShootingBehaviour ShootingBehaviour;
 
     public UnityEvent ShotFired;
     public UnityEvent EmptyMagazine;
@@ -17,6 +18,7 @@ public class ShootController : MonoBehaviour
     void Start()
     {
         timer = 0;
+        UpdateShootingBehaviour();
     }
 
     void Update()
@@ -36,8 +38,18 @@ public class ShootController : MonoBehaviour
         else
         {
             ShotFired.Invoke();
+            ShootingBehaviour.Shoot();
             timer = rifleCooldown;
         }
     }
 
+    private void OnTransformParentChanged()
+    {
+        UpdateShootingBehaviour();
+    }
+
+    private void UpdateShootingBehaviour()
+    {
+        ShootingBehaviour = transform.parent.GetComponent<ShootingBehaviour>();
+    }
 }
