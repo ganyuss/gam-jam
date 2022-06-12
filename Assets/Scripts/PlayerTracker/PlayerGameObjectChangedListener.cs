@@ -11,7 +11,7 @@ public class PlayerGameObjectChangedListener : MonoBehaviour
         CurrentPlayerGameObject = transform.parent.gameObject;
     }
 
-    private void OnTransformParentChanged()
+    public void OnEnable()
     {
         var newParent = transform.parent.gameObject;
         CurrentPlayerGameObject = newParent;

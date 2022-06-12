@@ -369,10 +369,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2075339934419994584, guid: 840885a0c586e9e46a0a89fbe81d3d56, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 840885a0c586e9e46a0a89fbe81d3d56, type: 3}
 --- !u!1 &773060598
@@ -908,16 +904,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8399845616197570250, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
   m_PrefabInstance: {fileID: 6752020}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1820390194 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
-  m_PrefabInstance: {fileID: 6752020}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1895875627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8399845616197570246, guid: 504539300b212ec4ebe09ea68f9b320c, type: 3}
   m_PrefabInstance: {fileID: 1334972452}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1958735872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6158182296675162967, guid: 3622ab37f947e924bb4622ef4e2da30a, type: 3}
+  m_PrefabInstance: {fileID: 914189471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958735883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73d50320d166ae45a8c592e683ad61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllySet: {fileID: 11400000, guid: 3da665b1ddb6aa94f8527e988a771de8, type: 2}
+  DeathAnimationCutoutSize: 40
 --- !u!1 &2093645942
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +941,7 @@ GameObject:
   - component: {fileID: 2093645943}
   - component: {fileID: 2093645946}
   - component: {fileID: 2093645947}
+  - component: {fileID: 2093645948}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1016,7 +1027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49981ada1508d5543b6a168186cbe00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransformToChase: {fileID: 1820390194}
   FreeWidth: 5
 --- !u!114 &2093645947
 MonoBehaviour:
@@ -1030,7 +1040,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fe98e53edba4149b3d754ecb20466e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransformToCheck: {fileID: 1820390194}
   ObjectsToMove: {fileID: 11400000, guid: d22ccca4c4bba5a42abe19b697537da5, type: 2}
-  ThreshHold: 1
+  Threshold: -5
   CanMoveUp: 1
+--- !u!114 &2093645948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093645942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d997c6c6fa2337447ad061f3d60a76ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlayerGameObjectChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2093645946}
+        m_TargetAssemblyTypeName: ObjectChaser, Assembly-CSharp
+        m_MethodName: set_GameObjectToChase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2093645947}
+        m_TargetAssemblyTypeName: MoveUpDetector, Assembly-CSharp
+        m_MethodName: set_GameObjectToCheck
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

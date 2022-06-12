@@ -30,12 +30,9 @@ public class DeathPanelCutoutAnimator : MonoBehaviour
     public void AnimationIn()
     {
         Vector3 cutoutTarget = Camera.main.ScreenToViewportPoint(DeathPanelAnimator.Instance.ScreenPosition);
-        Debug.Log(cutoutTarget.x * Screen.width);
-        Debug.Log((1-cutoutTarget.y) * Screen.height);
         DeathPanelMaterial.SetFloat(CutoutCenterX, cutoutTarget.x);
         DeathPanelMaterial.SetFloat(CutoutCenterY, cutoutTarget.y);
         
-        Debug.Log(Screen.height);
         
         StartCoroutine(TransitionCoroutineEaseOut(Time.timeScale, 0.1f, TimeScaleToZeroDuration, t => Time.timeScale = t));
         StartCoroutine(TransitionCoroutineEaseOut(MaxCutoutSize, DeathPanelAnimator.Instance.ObjectSize, AnimationDuration,

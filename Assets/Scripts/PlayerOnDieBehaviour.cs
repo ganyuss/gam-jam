@@ -11,7 +11,12 @@ public class PlayerOnDieBehaviour : MonoBehaviour
         DeathPanelAnimator.Instance.OnAnimationEnd += FindNewAlly;
     }
 
-    private void OnTransformParentChanged()
+    private void OnEnable()
+    {
+        UpdateOnDieListener();
+    }
+
+    private void UpdateOnDieListener()
     {
         if (transform.parent != null)
             transform.parent.gameObject.GetComponent<UnitDieBehaviour>().OnDie.AddListener(OnDie);
@@ -26,7 +31,11 @@ public class PlayerOnDieBehaviour : MonoBehaviour
 
     private void FindNewAlly()
     {
-        transform.parent = AllySet.EnabledGameObject[Random.Range(0, AllySet.EnabledGameObject.Count)].transform;
+        Transform myTransform = transform;
+        myTransform.parent = AllySet.EnabledGameObject[Random.Range(0, AllySet.EnabledGameObject.Count)].transform;
+        myTransform.localPosition = Vector3.zero;
+        myTransform.localRotation = Quaternion.identity;
+        
         gameObject.SetActive(true);
     }
 

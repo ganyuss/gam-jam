@@ -13,6 +13,9 @@ public class MoveUpDetector : MonoBehaviour
     
     void Update()
     {
+        if (!GameObjectToCheck || !CanMoveUp)
+            return;
+        
         Vector2 signedDistance = GameObjectToCheck.transform.position - transform.position;
         
         if (signedDistance.y > Threshold)
