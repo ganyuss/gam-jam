@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 3694319154508407785}
   - component: {fileID: 1051973323334669316}
   - component: {fileID: 3445884544759969564}
+  - component: {fileID: 3924525293602805599}
+  - component: {fileID: 6913963860317043258}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Ally
@@ -106,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectSet: {fileID: 11400000, guid: 20b4d6919edf2e2408cba2583578c801, type: 2}
-  range: 15
+  range: 35
   target: {fileID: 0}
 --- !u!114 &7577565323669844951
 MonoBehaviour:
@@ -321,3 +323,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3924525293602805599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577565323669844952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f13f107e3c05d4da9f416f58809b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnBulletHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1051973323334669316}
+        m_TargetAssemblyTypeName: UnitDieBehaviour, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!58 &6913963860317043258
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577565323669844952}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.07}
+  serializedVersion: 2
+  m_Radius: 0.13

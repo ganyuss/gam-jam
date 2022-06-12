@@ -20,7 +20,6 @@ public class MoveUpDetector : MonoBehaviour
         
         if (signedDistance.y > Threshold)
         {
-            Debug.Log(signedDistance.y);
             foreach (var objectToMove in ObjectsToMove.EnabledGameObject)
             {
                 objectToMove.transform.position += Vector3.down * ((signedDistance.y - Threshold) * 8f * Time.deltaTime);

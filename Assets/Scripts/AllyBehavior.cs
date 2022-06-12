@@ -15,7 +15,7 @@ public class AllyBehavior : MonoBehaviour
 
     public float movementTimer;
     public int decision;
-    private GameObject nearestEnemy = null;
+    public GameObject nearestEnemy = null;
     public Vector2 newPosition;
 
 
@@ -75,12 +75,11 @@ public class AllyBehavior : MonoBehaviour
         if (enemy == null || closestTarget.target != null)
             decision = NewDecision();
 
-        var position = transform.position;
+        var position = Vector2.zero;
 
         position.x = (position.x > enemy.transform.position.x ? -1 : 1) * Time.deltaTime * speed;
-        position.y = transform.position.y;
 
-        transform.position += (Vector3)position.normalized * speed * Time.deltaTime;
+        transform.position += (Vector3)position;
     }
 
     private float NewRandom(float weight)
@@ -90,6 +89,21 @@ public class AllyBehavior : MonoBehaviour
 
     private int NewDecision()
     {
+        if (transform.position.y <= maxDistanceBattlefield - 0.5f)
+        {
+
+            newPosition = new Vector2(transform.position.x + Random.Range(-5f, 5f), maxDistanceBattlefield + Random.Range(-5f, 5f));
+            if (newPosition.x < -WorldUtilities.TerrainWidth / 2)
+            {
+                newPosition.x += 4;
+            }
+            if (newPosition.x > WorldUtilities.TerrainWidth / 2)
+            {
+                newPosition.x -= 4;
+            }
+            return 0;
+        }
+        
         if (closestTarget.target != null)
             return 1;
 
@@ -113,25 +127,10 @@ public class AllyBehavior : MonoBehaviour
 
             return 2;
         }
-
         else
         {
-            if(transform.position.y > maxDistanceBattlefield -0.5f)
-            {
-                movementTimer = 1.0f;
-                return 2;
-            }
-
-            newPosition = new Vector2(transform.position.x + Random.Range(-5f, 5f), maxDistanceBattlefield + Random.Range(-5f, 5f));
-            if (newPosition.x < -WorldUtilities.TerrainWidth / 2)
-            {
-                newPosition.x += 4;
-            }
-            if (newPosition.x > WorldUtilities.TerrainWidth / 2)
-            {
-                newPosition.x -= 4;
-            }
-            return 0;
+            movementTimer = 1.0f;
+            return 2;
         }
 
     }
