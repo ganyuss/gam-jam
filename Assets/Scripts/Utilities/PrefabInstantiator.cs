@@ -6,6 +6,8 @@ public class PrefabInstantiator : MonoBehaviour
     public GameObject PrefabToInstantiate;
     public Vector2 HeadStart;
 
+    public float AngleRandomness;
+    
     [Button]
     public void InstantiatePrefab()
     {
@@ -21,6 +23,8 @@ public class PrefabInstantiator : MonoBehaviour
         if (prefabWasActive)
             PrefabToInstantiate.SetActive(true);
 
+        instantiatedObject.transform.Rotate(instantiatedObject.transform.forward, Random.Range(-AngleRandomness/2, AngleRandomness/2));
+        
         instantiatedObject.transform.Translate(HeadStart);
         instantiatedObject.SetActive(true);
     }

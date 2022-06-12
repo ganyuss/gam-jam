@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: DiePropPrefab
       value: 
       objectReference: {fileID: 4689965173339556726, guid: a844c9bff8fecd840ad9696beeb0d206, type: 3}
+    - target: {fileID: 5116764624632689197, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: AngleRandomness
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116764624632689197, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
+      propertyPath: PrefabToInstantiate
+      value: 
+      objectReference: {fileID: 2660722506317581111, guid: 727f702e0e755444dbfed3fbbc117700, type: 3}
     - target: {fileID: 7577565323669844948, guid: c8e14424c27035b48ab1416742c5fe32, type: 3}
       propertyPath: m_RootOrder
       value: 0
